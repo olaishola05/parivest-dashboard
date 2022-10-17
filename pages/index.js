@@ -1,5 +1,5 @@
 import Head from 'next/head'
-import Dashboard from '../components/Dashboard'
+import Dashboard from '../components/layouts/UI/Dashboard'
 import { Fragment } from 'react'
 import styles from '../styles/Home.module.css'
 
