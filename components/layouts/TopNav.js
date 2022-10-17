@@ -13,8 +13,8 @@ function TopNav (props) {
         <Image src={Logo} alt="logo" layout='responsive' />
       </div>
       <ul className={styles.lists}>
-        <li><Link href="/"><TfiReload /></Link></li>
-        <li><Link href="/"><IoIosNotificationsOutline /></Link></li>
+        <li><TfiReload /></li>
+        <li><IoIosNotificationsOutline /></li>
         <li>
           <div className={styles.user}>
             <div>

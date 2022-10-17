@@ -3,7 +3,8 @@ import Dashboard from '../components/layouts/UI/Dashboard'
 import { Fragment } from 'react'
 import styles from '../styles/Home.module.css'
 
-export default function Home() {
+
+export default function Home(props) {
   return (
     <Fragment>
       <Head>
@@ -18,3 +19,5 @@ export default function Home() {
     </Fragment>
   )
 }
+
+

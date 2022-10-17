@@ -10,16 +10,24 @@ import { AiOutlineUser } from 'react-icons/ai'
 import { HiOutlineKey } from 'react-icons/hi'
 import { IoLogOutOutline } from 'react-icons/io5'
 
+const sideLinks = [
+  { icons: <HiOutlineHome />, link: '/', text: 'Home' },
+  { icons: <FiUsers />, link: '/users', text: 'Users' },
+  { icons: <BsGraphUp />, link: '#', text: 'Investment' },
+  { icons: <MdOutlineSavings />, link: '#', text: 'Savings' },
+  { icons: <IoWalletOutline />, link: '#', text: 'Wallet' },
+  { icons: <AiOutlineUser />, link: '#', text: 'Admins' },
+]
+
 function SidePanel(props) {
   return (
     <div className={styles.sidePanel}>
       <ul className={styles.sideLinks}>
-        <li><HiOutlineHome /> <Link href="/"><a>Home</a></Link></li>
-        <li><FiUsers /> <Link href="/users"><a>Users</a></Link></li>
-        <li><BsGraphUp /> <Link href="/investment"><a>Investment</a></Link></li>
-        <li><MdOutlineSavings /> <Link href="/savings"><a>Savings</a></Link></li>
-        <li><IoWalletOutline /> <Link href="/wallet"><a>Wallet</a></Link></li>
-        <li><AiOutlineUser /> <Link href="/profile"><a>Profile</a></Link></li>
+        {sideLinks.map((link, index) => (
+          <li key={index}>
+            {link.icons} <Link href={link.link}>{link.text}</Link>
+          </li>
+        ))}
         </ul>
 
         <ul className={styles.account}>
