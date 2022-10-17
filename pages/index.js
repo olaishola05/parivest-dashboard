@@ -1,12 +1,11 @@
 import Head from 'next/head'
-// import Image from 'next/image'
 import Dashboard from '../components/Dashboard'
 import { Fragment } from 'react'
 import styles from '../styles/Home.module.css'
 
 export default function Home() {
   return (
-    <Fragment className={styles.container}>
+    <Fragment>
       <Head>
         <title>Parivest | Dashboard</title>
         <meta name="description" content="Parivest users Dashboard" />
