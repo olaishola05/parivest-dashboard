@@ -6,7 +6,6 @@ import UserTable from '../../components/layouts/UI/UserTable'
 
 function users(props) {
   const [data, setData] = useState({ data: [] })
-  console.log(data)
 
   useEffect(() => {
     const dataObj = props?.dataObj?.data[0]?.data;
