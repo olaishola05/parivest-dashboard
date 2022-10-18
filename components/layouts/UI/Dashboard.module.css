@@ -139,6 +139,14 @@
   color: dodgerblue;
 }
 
+.userBtn{
+  border: none;
+  padding: 10px;
+  border-radius: 5px;
+  background-color: #E7EEF9;
+  color: #6488C2;
+}
+
 .usermain th{
   color: #B0B4BA;
   font-size: 12px;

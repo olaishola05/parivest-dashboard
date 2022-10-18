@@ -17,7 +17,7 @@ function User(props) {
             <BsArrowLeft onClick={() => router.back()} />
             <h3>{`${router.query.first_name} ${router.query.last_name}`}</h3>
           </div>
-          <button>
+          <button className={styles.userBtn}>
             View profile status
           </button>
         </div>
