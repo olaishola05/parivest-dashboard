@@ -5,14 +5,14 @@ import UserTop from '../../components/layouts/UI/UserTop'
 import UserTable from '../../components/layouts/UI/UserTable'
 
 function users(props) {
-  const [data, setData] = useState({ data: [] })
+  // const [data, setData] = useState({ data: [] })
 
-  useEffect(() => {
-    const dataObj = props?.dataObj?.data[0]?.data;
-    setData((prev) => ({ ...prev, data: [...dataObj] }));
-  }, [props])
+  // useEffect(() => {
+  //   const dataObj = props?.dataObj?.data[0]?.data;
+  //   setData((prev) => ({ ...prev, data: [...dataObj] }));
+  // }, [props])
 
-  const userData = data?.data?.map((i, index) => {
+  const userData = props?.dataObj?.data[0]?.data?.map((i, index) => {
     return { ...i, key: index };
   });
   return (
