@@ -5,9 +5,10 @@ import UserTable from './UserTable'
 
 function Users(props) {
   const [data, setData] = useState({ data: [] })
+  console.log('data', data)
 
   useEffect(() => {
-    const dataObj = props?.users?.data;
+    const dataObj = props?.users?.data[0]?.data;
     setData((prev) => ({ ...prev, data: [...dataObj] }));
   }, [props])
 

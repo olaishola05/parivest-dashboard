@@ -3,6 +3,7 @@ import Users from "../../components/layouts/UI/Users";
 
 function UserContainer(props){
   const { dataObj } = props
+  console.log(dataObj)
   return (
     <Users users={dataObj} />
   )
