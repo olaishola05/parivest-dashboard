@@ -77,7 +77,7 @@ function UserTable({ userData = []}) {
           title="Action"
           dataIndex="action"
           key="7"
-          className=""
+          className={styles.view}
           render={(text, record) => {
             const id = record._id
             return (

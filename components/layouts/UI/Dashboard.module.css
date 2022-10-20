@@ -129,6 +129,11 @@
   margin-top: 3px;
 }
 
+.view {
+  color: dodgerblue;
+  text-transform: capitalize;
+}
+
 /* single user */
 .usermain{
   background-color: white;
@@ -218,6 +223,5 @@
   padding: 10px;
   text-align: center;
 }
-
 
 
