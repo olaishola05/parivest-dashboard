@@ -1,23 +1,34 @@
-import React from "react";
+import React, { useState } from "react";
 import Image from 'next/image'
 import Dashboard from "../../../components/layouts/UI/Dashboard";
-import { Divider } from 'antd';
 import { useRouter } from 'next/router'
 import { BsArrowLeft } from 'react-icons/bs'
 import styles from '../../../components/layouts/UI/Dashboard.module.css'
 import userPhoto from '../../../public/user.jpeg'
+import ModalPopUp from '../../../components/layouts/UI/Modal'
 
 function User(props) {
+  const [open, setOpen] = useState(false);
   const router = useRouter()
+
+  const showModal = () => {
+    console.log('show modal')
+    setOpen(true);
+  };
+
   return (
     <Dashboard>
+      <ModalPopUp open={open} setOpen={setOpen}/>
       <div className={styles.usermain}>
         <div className={styles.userTop}>
           <div className={styles.user}>
             <BsArrowLeft onClick={() => router.back()} />
             <h3>{`${router.query.first_name} ${router.query.last_name}`}</h3>
           </div>
-          <button className={styles.userBtn}>
+          <button
+            className={styles.userBtn}
+            onClick={showModal}
+          >
             View profile status
           </button>
         </div>

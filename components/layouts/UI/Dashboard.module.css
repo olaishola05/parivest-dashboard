@@ -145,6 +145,7 @@
   border-radius: 5px;
   background-color: #E7EEF9;
   color: #6488C2;
+  cursor: pointer;
 }
 
 .usermain th{
