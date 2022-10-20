@@ -158,9 +158,21 @@
 }
 
 .user{
+  width: 180px;
   display: flex;
-  gap: 10px;
+  gap: 15px;
   color: dodgerblue;
+  padding: 5px;
+}
+
+.backArrow{
+  color: dodgerblue;
+  font-size: 30px;
+  font-weight: bold;
+  cursor: pointer;
+  border: 1px solid dodgerblue;
+  border-radius: 50%;
+  padding: 5px;
 }
 
 .photo{

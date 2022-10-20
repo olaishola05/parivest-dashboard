@@ -12,7 +12,6 @@ function User(props) {
   const router = useRouter()
 
   const showModal = () => {
-    console.log('show modal')
     setOpen(true);
   };
 
@@ -22,7 +21,7 @@ function User(props) {
       <div className={styles.usermain}>
         <div className={styles.userTop}>
           <div className={styles.user}>
-            <BsArrowLeft onClick={() => router.back()} />
+            <BsArrowLeft className={styles.backArrow} onClick={() => router.back()} />
             <h3>{`${router.query.first_name} ${router.query.last_name}`}</h3>
           </div>
           <button
