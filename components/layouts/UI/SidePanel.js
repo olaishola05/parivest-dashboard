@@ -11,7 +11,7 @@ import { HiOutlineKey } from 'react-icons/hi'
 import { IoLogOutOutline } from 'react-icons/io5'
 
 const sideLinks = [
-  { icons: <HiOutlineHome />, link: '/', text: 'Home' },
+  { icons: <HiOutlineHome />, link: '/home', text: 'Home' },
   { icons: <FiUsers />, link: '/users', text: 'Users' },
   { icons: <BsGraphUp />, link: '#', text: 'Investment' },
   { icons: <MdOutlineSavings />, link: '#', text: 'Savings' },
