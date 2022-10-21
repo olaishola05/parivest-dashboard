@@ -8,7 +8,6 @@ function UserTop() {
         <select name="dataview" id="dataview">
           <option className={styles.options} value="all">All</option>
           <option value="approved">Approved</option>
-          <option value="pending">Pending</option>
           <option value="review">In-review</option>
         </select>
       </div>

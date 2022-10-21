@@ -17,7 +17,7 @@ function User(props) {
 
   return (
     <Dashboard>
-      <ModalPopUp open={open} setOpen={setOpen}/>
+      <ModalPopUp open={open} setOpen={setOpen} routerData={router}/>
       <div className={styles.usermain}>
         <div className={styles.userTop}>
           <div className={styles.user}>

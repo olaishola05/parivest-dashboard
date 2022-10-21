@@ -1,12 +1,25 @@
-import { Button, Modal } from 'antd';
+import { Modal } from 'antd';
 import React, { useState } from 'react';
+import styles from './Dashboard.module.css'
 
-function ModalPopUp({ open, setOpen }) {
+const SelectOptions = (props) => {
+  return(
+    <div className={styles.customselect}>
+      <select name="dataview" id="dataview">
+        <option value="approved">Approved</option>
+        <option value="pending">Pending</option>
+        <option value="review">Review</option>
+      </select>
+    </div>
+  )
+}
+
+function ModalPopUp({ open, setOpen, routerData }) {
     const [confirmLoading, setConfirmLoading] = useState(false);
-    const [modalText, setModalText] = useState('Content of the modal');
+    const { status } = routerData.query;
+    console.log(status)
 
     const handleOk = () => {
-      setModalText('The modal will be closed after two seconds');
       setConfirmLoading(true);
       setTimeout(() => {
         setOpen(false);
@@ -15,23 +28,42 @@ function ModalPopUp({ open, setOpen }) {
     };
 
     const handleCancel = () => {
-      console.log('Clicked cancel button');
       setOpen(false);
     };
 
     return (
       <>
-        {/* <Button type="primary" onClick={showModal}>
-          Open Modal with async logic
-        </Button> */}
         <Modal
-          title="Title"
+          title="Status"
           open={open}
           onOk={handleOk}
           confirmLoading={confirmLoading}
           onCancel={handleCancel}
         >
-          <p>{modalText}</p>
+          <div>
+            <div>
+              <span>Access</span>
+              <SelectOptions />
+            </div>
+            <div>
+              <span>Account Information</span>
+              <SelectOptions />
+            </div>
+            <div>
+              <span>Investment Profile</span>
+              <SelectOptions />
+            </div>
+
+            <div>
+              <span>Employment Information</span>
+              <SelectOptions />
+            </div>
+          </div>
+
+          <div>
+            <span>Bio Information</span>
+            <SelectOptions />
+          </div>
         </Modal>
       </>
     );
