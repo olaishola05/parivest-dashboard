@@ -4,7 +4,7 @@ import styles from './Dashboard.module.css'
 
 const SelectOptions = (props) => {
   return(
-    <div className={styles.customselect}>
+    <div className={styles.selectsOpt}>
       <select name="dataview" id="dataview">
         <option value="approved">Approved</option>
         <option value="pending">Pending</option>
@@ -40,7 +40,7 @@ function ModalPopUp({ open, setOpen, routerData }) {
           confirmLoading={confirmLoading}
           onCancel={handleCancel}
         >
-          <div>
+          <div className={styles.selectscontainer}>
             <div>
               <span>Access</span>
               <SelectOptions />
@@ -58,12 +58,12 @@ function ModalPopUp({ open, setOpen, routerData }) {
               <span>Employment Information</span>
               <SelectOptions />
             </div>
+            <div>
+              <span>Bio Information</span>
+              <SelectOptions />
+            </div>
           </div>
 
-          <div>
-            <span>Bio Information</span>
-            <SelectOptions />
-          </div>
         </Modal>
       </>
     );

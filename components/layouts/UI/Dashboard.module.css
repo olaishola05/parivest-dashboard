@@ -224,4 +224,33 @@
   text-align: center;
 }
 
+/* select components */
+.selectscontainer{
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.selectscontainer span{
+  color: #B0B4BA;
+  font-size: 12px;
+}
+
+.selectsOpt{
+  margin-bottom: 20px;
+}
+
+
+.selectsOpt select{
+  border: none;
+  background-color: #F3F6FC;
+  padding:8px 3px;
+  width: 100%;
+}
+
+.selectsOpt select:focus{
+  outline: none;
+}
+
 
