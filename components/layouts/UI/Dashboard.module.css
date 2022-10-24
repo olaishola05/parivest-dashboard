@@ -224,6 +224,11 @@
   text-align: center;
 }
 
+.modal{
+  width: 34% !important;
+  border: 1px solid red;
+}
+
 /* select components */
 .selectscontainer{
   width: 100%;

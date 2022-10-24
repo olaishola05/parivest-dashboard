@@ -39,6 +39,7 @@ function ModalPopUp({ open, setOpen, routerData }) {
           onOk={handleOk}
           confirmLoading={confirmLoading}
           onCancel={handleCancel}
+          className={styles.modal}
         >
           <div className={styles.selectscontainer}>
             <div>
